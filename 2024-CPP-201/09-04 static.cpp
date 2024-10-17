@@ -15,7 +15,11 @@ public:
 	}
 
 	static int* get_address_num(void) { return &num_; }
-	static int get_num(void) { return num_; }
+	static int get_num(void) {
+		// gam_++;
+		// static 멤버 함수에는 일반 멤버변수가 들어갈 수 없다
+		return num_;
+	}
 	int* get_address_gam(void) { return &gam_; }
 	int get_gam(void) { return gam_; }
 };
